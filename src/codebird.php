@@ -817,6 +817,12 @@ class Codebird
             }
             $authorization = 'Authorization: Bearer ' . self::$_oauth_bearer_token;
         }
+
+        if (self::$_oauth_bearer_token!=null)
+        {
+            $authorization = 'Authorization: Bearer ' . self::$_oauth_bearer_token;            
+        }
+
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
         curl_setopt($ch, CURLOPT_HEADER, 1);
